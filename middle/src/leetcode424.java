@@ -1,5 +1,8 @@
 package src;
 
+/**
+ * 替换后的最长重复字符
+ */
 public class leetcode424 {
     public static int characterReplacement(String s, int k) {
         char[] str = s.toCharArray();

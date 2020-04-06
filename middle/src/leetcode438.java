@@ -3,6 +3,9 @@ package src;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 找到字符串中所有字母异位词
+ */
 public class leetcode438 {
     public static List<Integer> findAnagrams(String s, String p) {
         if(s.length()<p.length()) return new ArrayList<>();
