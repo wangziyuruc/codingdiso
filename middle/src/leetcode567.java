@@ -6,6 +6,8 @@ package src;
 public class leetcode567 {
     public boolean checkInclusion(String s1, String s2) {
 
+        return false;
+
     }
 
     public static void main(String[] args) {
