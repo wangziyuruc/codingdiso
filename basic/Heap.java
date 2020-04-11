@@ -21,10 +21,12 @@ public class Heap {
         this.count=a.length-1;
     }
 
+    /**
+     * 将对内数组堆化
+     */
     public void buildHeap(){
-
         for (int i=(a.length)/2;i>0;i--){
-            heapify(a,this.n,i);
+            heapify(a,i);
         }
     }
 
@@ -52,20 +54,19 @@ public class Heap {
         int max = a[1];
         a[1]=a[count];
         count--;
-        heapify(a,count,1);
+        heapify(a,1);
         return max;
     }
 
     /**
      * @param a 数组
-     * @param n 当前堆内数据个数
      * @param i 开始堆化的起始位置
      */
-    private void heapify(int[] a,int n,int i){ // 自上向下堆化
+    private void heapify(int[] a,int i){ // 自上向下堆化
         while (true){
             int maxPos = i;
-            if(i*2<=n && a[i]<a[i*2]) maxPos=i*2; // 左边元素对比
-             if(i*2+1<=n && a[i]<a[i*2+1]) maxPos=i*2+1; // 右边元素对比
+            if(i*2<=this.count && a[i]<a[i*2]) maxPos=i*2; // 左边元素对比
+             if(i*2+1<=this.count && a[i]<a[i*2+1]) maxPos=i*2+1; // 右边元素对比
             swap(a,i,maxPos);
             if(maxPos == i) break;
             i=maxPos;

@@ -17,7 +17,7 @@ public class leetcode480 {
 
             if(right-left+1==k){
                 // 计算当前数组的中位数字
-                result[num]=median(arrayList,k);
+//                result[num]=median(arrayList,k);
                 arrayList.remove(0);
                 num++;
                 left++;
@@ -28,17 +28,7 @@ public class leetcode480 {
         return result;
     }
 
-    public static double median(ArrayList<Integer> medianList,int k){
-        ArrayList<Integer> arrayList = new ArrayList<>(medianList);
-        Collections.sort(arrayList);
-        if(k%2==0){
-            double left = arrayList.get(k/2-1);
-            double right = arrayList.get(k/2);
-            return (left+right)/2;
-        }else {
-            return arrayList.get(k/2);
-        }
-    }
+   
 
     public static void main(String[] args) {
         int[] a={1,3,-1,-3,5,3,6,7};
