@@ -70,7 +70,7 @@ public class Graph { // 无向图
     }
 
     private void print(int[] prev, int s, int t){
-        if(prev[t]!=-1&& t!=s){
+        if(prev[t]!=-1&& t!=s ){
             print(prev,s,prev[t]);
         }
         System.out.println(t+" ");
@@ -90,7 +90,7 @@ public class Graph { // 无向图
         Arrays.fill(prev,-1);
 
         recurDfs(visited,prev,s,t);
-        print(prev,s,t);
+//        print(prev,s,t);
     }
 
     private void recurDfs(boolean[] visited,int[] prev,int w,int t){
@@ -124,7 +124,7 @@ public class Graph { // 无向图
         graph.addEager(4,5);
         graph.addEager(5,7);
         graph.addEager(6,7);
-        graph.dfs(0,7);
+        graph.dfs(0,8);
 
     }
 
